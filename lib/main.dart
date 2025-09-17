@@ -4,12 +4,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'src/routing/app_router.dart';
 import 'src/services/supabase_service.dart';
 import 'src/theme/app_theme.dart';
+import 'package:flutter/foundation.dart'; // kDebugMode
 
 /// Entry point of the super app.
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Initialize Supabase before running the app.
   await SupabaseService.initialize();
+  // HANYA untuk DEV: paksa logout setiap app start
+  if (kDebugMode) {
+    await SupabaseService.client.auth.signOut();
+  }
   runApp(const ProviderScope(child: SchoolSuperApp()));
 }
 
