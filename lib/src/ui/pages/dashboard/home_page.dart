@@ -43,47 +43,47 @@ class HomePage extends StatelessWidget {
               _MenuTile(
                 icon: Icons.qr_code_2_rounded,
                 label: 'Absensi',
-                onTap: () => context.go('/attendance'),
+                onTap: () => context.push('/attendance'),
               ),
               _MenuTile(
                 icon: Icons.fact_check_rounded,
                 label: 'Ujian',
-                onTap: () => context.go('/exams'),
+                onTap: () => context.push('/exams'),
               ),
               _MenuTile(
                 icon: Icons.task_rounded,
                 label: 'Tugas',
-                onTap: () => context.go('/assignments'),
+                onTap: () => context.push('/assignments'),
               ),
               _MenuTile(
                 icon: Icons.bar_chart_rounded,
                 label: 'Nilai',
-                onTap: () => context.go('/grades'),
+                onTap: () => context.push('/grades'),
               ),
               _MenuTile(
                 icon: Icons.campaign_rounded,
                 label: 'Pengumuman',
-                onTap: () => context.go('/announcements'),
+                onTap: () => context.push('/announcements'),
               ),
               _MenuTile(
                 icon: Icons.calendar_month_rounded,
                 label: 'Jadwal',
-                onTap: () => context.go('/schedule'),
+                onTap: () => context.push('/schedule'),
               ),
               _MenuTile(
                 icon: Icons.chat_bubble_rounded,
                 label: 'Chat',
-                onTap: () => context.go('/chat'),
+                onTap: () => context.push('/chat'),
               ),
               _MenuTile(
                 icon: Icons.person_rounded,
                 label: 'Profil',
-                onTap: () => context.go('/profile'),
+                onTap: () => context.push('/profile'),
               ),
               _MenuTile(
                 icon: Icons.settings_rounded,
                 label: 'Pengaturan',
-                onTap: () => context.go('/settings'),
+                onTap: () => context.push('/settings'),
               ),
             ],
           ),
@@ -116,9 +116,9 @@ class _GreetingCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Assalamualaikum, ',
-                    style: const TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                   const SizedBox(height: 6),
                   const Text(
